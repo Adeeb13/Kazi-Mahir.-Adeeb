@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>CV — Kazi Mahir Adeeb</title>
+  <meta name="description" content="Curriculum Vitae — Kazi Mahir Adeeb · Ethical AI Architect · Independent Researcher"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;900&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet"/>
+  <style>
+
+  /* ══════════════════════════════════════════
+     KAZI MAHIR ADEEB — CURRICULUM VITAE
+     Print-ready · A4 · Gold & Black
+  ══════════════════════════════════════════ */
+
+  :root {
+    --gold:      #b58a28;
+    --gold-l:    #d4a840;
+    --gold-xl:   #e8c060;
+    --black:     #0e0d0b;
+    --dark:      #1c1a18;
+    --mid:       #4a4640;
+    --light:     #8a847c;
+    --lighter:   #b0aa9e;
+    --bg:        #faf8f4;
+    --bg2:       #f3f0e8;
+    --bg3:       #ede9df;
+    --line:      #ddd5c0;
+    --line-l:    #e8e2d4;
+    --fh: 'Cinzel', serif;
+    --fb: 'Cormorant Garamond', serif;
+    --fm: 'Space Mono', monospace;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { background: #d8d0c0; }
+
+  body {
+    font-family: var(--fb);
+    font-size: 10pt;
+    line-height: 1.58;
+    color: var(--black);
+    background: var(--bg);
+    max-width: 210mm;
+    margin: 2rem auto;
+    box-shadow: 0 6px 50px rgba(0,0,0,0.2);
+  }
+
+  /* ── PRINT BUTTON ── */
+  .print-bar {
+    background: var(--black);
+    padding: 0.7rem 2.5rem;
+    display: flex; align-items: center; justify-content: space-between;
+    position: sticky; top: 0; z-index: 10;
+  }
+  .print-bar span {
+    font-family: var(--fm); font-size: 0.6rem;
+    letter-spacing: 0.2em; text-transform: uppercase;
+    color: rgba(255,255,255,0.4);
+  }
+  .print-btn {
+    font-family: var(--fm); font-size: 0.6rem;
+    letter-spacing: 0.18em; text-transform: uppercase;
+    padding: 0.4rem 1.2rem;
+    background: var(--gold); color: var(--black);
+    border: none; cursor: pointer;
+    transition: background 0.2s;
+  }
+  .print-btn:hover { background: var(--gold-xl); }
+  @media print { .print-bar { display: none; } }
+
+  /* ── HEADER ── */
+  .cv-header {
+    background: var(--black);
+    color: white;
+    padding: 2.8rem 3rem 2.4rem;
+    position: relative; overflow: hidden;
+  }
+  .cv-header::before {
+    content: ''; position: absolute;
+    top: 0; left: 0; right: 0; height: 3px;
+    background: linear-gradient(90deg, var(--gold), var(--gold-xl), var(--gold));
+  }
+  .cv-header::after {
+    content: ''; position: absolute;
+    inset: 0; pointer-events: none;
+    background: radial-gradient(ellipse at 80% 50%, rgba(212,168,64,0.07) 0%, transparent 65%);
+  }
+
+  .cv-header-grid {
+    display: grid; grid-template-columns: 1fr auto;
+    gap: 3rem; align-items: start; position: relative; z-index: 1;
+  }
+
+  .cv-name {
+    font-family: var(--fh);
+    font-size: 28pt; font-weight: 900;
+    letter-spacing: 0.07em; color: white;
+    line-height: 1; margin-bottom: 0.5rem;
+  }
+  .cv-name-accent {
+    color: transparent;
+    -webkit-text-stroke: 0.8px var(--gold-xl);
+  }
+  .cv-roles {
+    font-family: var(--fm); font-size: 6.5pt;
+    letter-spacing: 0.26em; text-transform: uppercase;
+    color: rgba(255,255,255,0.4);
+  }
+  .cv-roles span { color: var(--gold-l); margin: 0 0.4em; }
+
+  .cv-contact { text-align: right; }
+  .cv-contact-item {
+    font-family: var(--fm); font-size: 6.5pt;
+    letter-spacing: 0.09em; color: rgba(255,255,255,0.45);
+    margin-bottom: 0.28rem;
+    display: flex; align-items: center; justify-content: flex-end; gap: 0.5rem;
+  }
+  .cv-contact-item a { color: inherit; text-decoration: none; }
+
+  .cv-profile {
+    grid-column: 1 / -1;
+    padding-top: 1.4rem; margin-top: 1.4rem;
+    border-top: 1px solid rgba(255,255,255,0.1);
+    font-size: 10.5pt; line-height: 1.75;
+    color: rgba(255,255,255,0.72);
+    font-style: italic;
+    max-width: 88%;
+  }
+  .cv-profile strong { color: var(--gold-l); font-style: normal; font-weight: 600; }
+
+  /* ── LAYOUT ── */
+  .cv-body {
+    display: grid;
+    grid-template-columns: 1fr 195px;
+  }
+  .cv-main { padding: 2.4rem 2.8rem 2.4rem 3rem; }
+  .cv-sidebar {
+    background: var(--bg2);
+    border-left: 1px solid var(--line);
+    padding: 2.2rem 1.5rem;
+  }
+
+  /* ── SECTION ── */
+  .cv-sec { margin-bottom: 2.4rem; }
+  .cv-sec:last-child { margin-bottom: 0; }
+
+  .sec-label {
+    font-family: var(--fm); font-size: 6pt;
+    letter-spacing: 0.3em; text-transform: uppercase;
+    color: var(--gold);
+    display: flex; align-items: center; gap: 0.8rem;
+    margin-bottom: 1.1rem; padding-bottom: 0.4rem;
+    border-bottom: 1px solid var(--line);
+  }
+  .sec-label::after {
+    content: ''; flex: 1;
+    height: 1px;
+    background: linear-gradient(90deg, var(--line), transparent);
+  }
+
+  /* ── AWARD ENTRY ── */
+  .award-entry {
+    display: grid; grid-template-columns: 3px 1fr;
+    gap: 0 1rem; align-items: start;
+    margin-bottom: 1.1rem; padding-bottom: 1.1rem;
+    border-bottom: 1px solid var(--line-l);
+  }
+  .award-entry:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+  .ae-bar { background: var(--gold); border-radius: 2px; align-self: stretch; }
+  .ae-bar.plat  { background: #b0bcc8; }
+  .ae-bar.silv  { background: #9aa0aa; }
+  .ae-bar.brnz  { background: #a87850; }
+
+  .ae-title {
+    font-family: var(--fh); font-size: 9.5pt; font-weight: 700;
+    color: var(--black); letter-spacing: 0.02em; margin-bottom: 0.12rem;
+    line-height: 1.3;
+  }
+  .ae-org {
+    font-family: var(--fm); font-size: 6pt; letter-spacing: 0.1em;
+    color: var(--light); margin-bottom: 0.28rem;
+  }
+  .ae-desc {
+    font-size: 9.5pt; color: var(--mid); line-height: 1.55;
+  }
+  .ae-desc strong { color: var(--dark); font-weight: 600; }
+
+  /* ── RESEARCH ENTRY ── */
+  .res-entry {
+    margin-bottom: 1.1rem; padding-bottom: 1.1rem;
+    border-bottom: 1px solid var(--line-l);
+  }
+  .res-entry:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+  .res-title {
+    font-family: var(--fh); font-size: 9.5pt; font-weight: 700;
+    color: var(--black); letter-spacing: 0.02em; margin-bottom: 0.1rem;
+  }
+  .res-meta {
+    font-family: var(--fm); font-size: 6pt; letter-spacing: 0.1em;
+    color: var(--gold); margin-bottom: 0.25rem;
+  }
+  .res-desc { font-size: 9.5pt; color: var(--mid); line-height: 1.55; }
+  .res-desc strong { color: var(--dark); }
+
+  /* ── PROGRAMME ROW ── */
+  .prog-row {
+    display: flex; justify-content: space-between; align-items: baseline;
+    gap: 1rem; margin-bottom: 0.75rem; padding-bottom: 0.75rem;
+    border-bottom: 1px solid var(--line-l);
+  }
+  .prog-row:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+  .pr-name {
+    font-family: var(--fb); font-size: 9.5pt; font-weight: 600;
+    color: var(--dark); line-height: 1.4;
+  }
+  .pr-name em { font-weight: 400; color: var(--mid); font-style: italic; }
+  .pr-detail {
+    font-family: var(--fm); font-size: 6pt;
+    letter-spacing: 0.08em; color: var(--light);
+    text-align: right; flex-shrink: 0; line-height: 1.5;
+  }
+
+  /* ── PROJECT ROW ── */
+  .proj-entry {
+    margin-bottom: 0.85rem; padding-bottom: 0.85rem;
+    border-bottom: 1px solid var(--line-l);
+  }
+  .proj-entry:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+  .proj-name { font-family: var(--fb); font-weight: 600; font-size: 9.5pt; color: var(--dark); }
+  .proj-tech { font-family: var(--fm); font-size: 6pt; letter-spacing: 0.1em; color: var(--gold); margin-bottom: 0.18rem; }
+  .proj-desc { font-size: 9pt; color: var(--mid); line-height: 1.5; }
+  .proj-desc strong { color: var(--dark); }
+
+  /* ── SIDEBAR ── */
+  .sb-sec { margin-bottom: 1.8rem; }
+  .sb-sec:last-child { margin-bottom: 0; }
+  .sb-label {
+    font-family: var(--fm); font-size: 5.5pt;
+    letter-spacing: 0.28em; text-transform: uppercase;
+    color: var(--gold); margin-bottom: 0.75rem;
+    padding-bottom: 0.35rem;
+    border-bottom: 1px solid var(--line);
+  }
+  .sb-item { font-size: 8.5pt; color: var(--dark); margin-bottom: 0.35rem; line-height: 1.45; }
+  .sb-item strong { font-family: var(--fb); font-weight: 600; display: block; color: var(--black); }
+  .sb-item span { font-family: var(--fm); font-size: 6pt; letter-spacing: 0.08em; color: var(--light); }
+
+  .exp-tag {
+    display: inline-block;
+    font-family: var(--fm); font-size: 5.5pt;
+    letter-spacing: 0.1em; padding: 0.18rem 0.5rem;
+    border: 1px solid var(--line); color: var(--mid);
+    margin: 0.14rem 0.14rem 0 0;
+  }
+  .cert-item { font-family: var(--fm); font-size: 6.5pt; letter-spacing: 0.05em; color: var(--mid); margin-bottom: 0.2rem; }
+
+  /* ── PRINT ── */
+  @media print {
+    html { background: white; }
+    body { margin: 0; box-shadow: none; max-width: 100%; font-size: 9.5pt; }
+    @page { margin: 0; size: A4; }
+    .cv-body { min-height: 260mm; }
+    a { color: inherit; }
+  }
+
+  @media screen and (max-width: 680px) {
+    body { margin: 0; }
+    .cv-body { grid-template-columns: 1fr; }
+    .cv-sidebar { border-left: none; border-top: 1px solid var(--line); }
+    .cv-header-grid { grid-template-columns: 1fr; }
+    .cv-contact { text-align: left; }
+    .cv-contact-item { justify-content: flex-start; }
+    .cv-profile { max-width: 100%; }
+  }
+  </style>
+</head>
+<body>
+
+  <div class="print-bar">
+    <span>Kazi Mahir Adeeb — Curriculum Vitae</span>
+    <button class="print-btn" onclick="window.print()">Print / Save PDF</button>
+  </div>
+
+  <!-- ══ HEADER ══ -->
+  <header class="cv-header">
+    <div class="cv-header-grid">
+      <div>
+        <div class="cv-name">Kazi Mahir <span class="cv-name-accent">Adeeb</span></div>
+        <div class="cv-roles">
+          Ethical AI Architect <span>·</span> Independent Researcher <span>·</span> Global Policy Scholar
+        </div>
+      </div>
+      <div class="cv-contact">
+        <div class="cv-contact-item">thundermahir08@gmail.com</div>
+        <div class="cv-contact-item">+880 1860 695891</div>
+        <div class="cv-contact-item">Dhaka, Bangladesh</div>
+        <div class="cv-contact-item"><a href="https://linkedin.com/in/kazi-mahir-adeeb-62b954340" target="_blank">linkedin/kazi-mahir-adeeb</a></div>
+        <div class="cv-contact-item"><a href="https://github.com/Adeeb13" target="_blank">github.com/Adeeb13</a></div>
+      </div>
+      <p class="cv-profile">
+        High school researcher specialising in <strong>Ethical AI</strong> and <strong>Global Policy</strong>. Creator of <strong>Constraint-Based Autonomy (CBA)</strong> — a framework for embedding ethical governance directly into autonomous AI systems, now indexed on Google Scholar. Internationally recognised across writing, science, and research; committed to bridging AI theory with real-world humanitarian impact. My journey has taught me that "the floor moves — but I walk anyway."
+      </p>
+    </div>
+  </header>
+
+  <!-- ══ BODY ══ -->
+  <div class="cv-body">
+    <main class="cv-main">
+
+      <!-- HONOURS -->
+      <div class="cv-sec">
+        <div class="sec-label">Honours &amp; Awards</div>
+
+        <div class="award-entry">
+          <div class="ae-bar"></div>
+          <div>
+            <div class="ae-title">Queen's Commonwealth Essay Competition — Gold Award</div>
+            <div class="ae-org">Royal Commonwealth Society · 2025 · Signed by Sir Ben Okri OBE</div>
+            <div class="ae-desc">Selected from <strong>53,434+ entries across 56 nations</strong> — one of the most prestigious youth writing honours on Earth. Essay rooted in the work of George Orwell.</div>
+          </div>
+        </div>
+
+        <div class="award-entry">
+          <div class="ae-bar plat"></div>
+          <div>
+            <div class="ae-title">Scholar's Laureate Award — Highest Distinction</div>
+            <div class="ae-org">Immerse Education · 2026</div>
+            <div class="ae-desc">Reserved for the most outstanding submissions worldwide. <strong>75% tuition scholarship</strong> for Oxford/Cambridge programmes.</div>
+          </div>
+        </div>
+
+        <div class="award-entry">
+          <div class="ae-bar silv"></div>
+          <div>
+            <div class="ae-title">Lumiere Scholars Essay Award — Distinction</div>
+            <div class="ae-org">Lumiere Education · 2025</div>
+            <div class="ae-desc">Selected from <strong>2,000+ essays across 111 countries</strong>. <strong>$500 merit scholarship</strong> + PhD mentorship (Harvard / Stanford / Oxford).</div>
+          </div>
+        </div>
+
+        <div class="award-entry">
+          <div class="ae-bar silv"></div>
+          <div>
+            <div class="ae-title">TED Summer School — Global Speaking Scholarship</div>
+            <div class="ae-org">Immerse Education × TED-Ed · 2026</div>
+            <div class="ae-desc">Recognised for thoughtfulness, clarity, and intellectual potential among record global submissions.</div>
+          </div>
+        </div>
+
+        <div class="award-entry">
+          <div class="ae-bar brnz"></div>
+          <div>
+            <div class="ae-title">Immerse Education Essay Competition — Runner-Up</div>
+            <div class="ae-org">2026 · Separate Competitive Cycle</div>
+            <div class="ae-desc">Top finalist. <strong>50% tuition scholarship</strong> awarded.</div>
+          </div>
+        </div>
+
+        <div class="award-entry">
+          <div class="ae-bar brnz"></div>
+          <div>
+            <div class="ae-title">ASEAN Global Youth Summit — Delegate</div>
+            <div class="ae-org">Studec International · 2025</div>
+            <div class="ae-desc">Selected from <strong>1,000+ global applicants</strong> for Singapore &amp; Malaysia summit.</div>
+          </div>
+        </div>
+
+        <div class="award-entry">
+          <div class="ae-bar brnz"></div>
+          <div>
+            <div class="ae-title">John Locke Institute — $500 Scholarship Recipient</div>
+            <div class="ae-org">Radley College, Oxford</div>
+            <div class="ae-desc">Scholarship awarded for summer programmes at Radley College, Oxford.</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- RESEARCH -->
+      <div class="cv-sec">
+        <div class="sec-label">Research &amp; Publications</div>
+
+        <div class="res-entry">
+          <div class="res-title">The Self-Evolving Machine (SEM) &amp; Constraint-Based Autonomy (CBA)</div>
+          <div class="res-meta">Sole Author · SSRN / PhilArchive / ResearchGate · Google Scholar Indexed</div>
+          <div class="res-desc">Conceptual framework for <strong>Constraint-Based Autonomy</strong> — embedding ethical constraints into adaptive AI architecture. Integrates complexity theory, evolutionary computation, and modular robotics to redefine machine intelligence governance.</div>
+        </div>
+
+        <div class="res-entry">
+          <div class="res-title">Thermodynamics Research Paper <em style="font-size:8.5pt;color:#8a847c;font-style:italic;font-family:var(--fb)">(Co-authored · In Progress)</em></div>
+          <div class="res-meta">Co-Author · University of Oklahoma · Forthcoming</div>
+          <div class="res-desc">Co-authoring with a <strong>Research Assistant Professor at the University of Oklahoma</strong>. Regular meetings to finalise the work — a rare, high-level collaboration at secondary school stage.</div>
+        </div>
+
+        <div class="res-entry">
+          <div class="res-title">Revisiting the Wheatstone Bridge</div>
+          <div class="res-meta">SSRN · Published</div>
+          <div class="res-desc">Critical analysis of theoretical validity vs. practical constraint in high-resistance metrology.</div>
+        </div>
+
+        <div class="res-entry">
+          <div class="res-title">Re-examination of Gauss's Law Inside Charged Spheres</div>
+          <div class="res-meta">SSRN · Published</div>
+          <div class="res-desc">Exposes pedagogical oversimplification in physics instruction; proposes a four-case comparative framework with canonical-source citations.</div>
+        </div>
+
+        <div class="res-entry">
+          <div class="res-title">Two Published Articles — Monomousumi</div>
+          <div class="res-meta">Monomousumi.com · 2025</div>
+          <div class="res-desc">"Munch Selectively to Stand Out" &amp; "Entertainment Without Borders" — editorially selected and published, reaching a public audience.</div>
+        </div>
+      </div>
+
+      <!-- PROGRAMMES -->
+      <div class="cv-sec">
+        <div class="sec-label">Selective Programmes &amp; Competitions</div>
+
+        <div class="prog-row">
+          <div class="pr-name">Stanford Code in Place <em>— Accepted Student</em></div>
+          <div class="pr-detail">Stanford University · 2026<br/>Selected from 66,000+</div>
+        </div>
+        <div class="prog-row">
+          <div class="pr-name">The Knowledge Society (TKS) <em>— Global Human Accelerator</em></div>
+          <div class="pr-detail">2025 · $3,000 USD aid</div>
+        </div>
+        <div class="prog-row">
+          <div class="pr-name">Lumiere Research Scholar <em>— PhD Mentorship</em></div>
+          <div class="pr-detail">Harvard/Stanford/Oxford</div>
+        </div>
+        <div class="prog-row">
+          <div class="pr-name">Oxford Summer Scholars Programme <em>— Interview-Based</em></div>
+          <div class="pr-detail">2026</div>
+        </div>
+        <div class="prog-row">
+          <div class="pr-name">Bangladesh Stockholm Junior Water Prize <em>— National Finalist · Lumin-Sense v2.0</em></div>
+          <div class="pr-detail">2026</div>
+        </div>
+        <div class="prog-row">
+          <div class="pr-name">CERN Beamline for Schools <em>— 'Cosmic Polar Orchestra' · Geant4 (C++)</em></div>
+          <div class="pr-detail">2026</div>
+        </div>
+        <div class="prog-row">
+          <div class="pr-name">ICT Olympiad Bangladesh <em>— Semi-Finalist · Winner: Semi-Final, Quarter-Final &amp; Selection Rounds</em></div>
+          <div class="pr-detail">2025</div>
+        </div>
+        <div class="prog-row">
+          <div class="pr-name">UN Governance Cohort <em>— UNITAR / UNECE / UN CC:Learn · 10+ Certifications</em></div>
+          <div class="pr-detail">2025</div>
+        </div>
+        <div class="prog-row">
+          <div class="pr-name">Foyle Young Poets of the Year <em>— The Poetry Society</em></div>
+          <div class="pr-detail">2025</div>
+        </div>
+      </div>
+
+      <!-- PROJECTS -->
+      <div class="cv-sec">
+        <div class="sec-label">Independent Projects &amp; Websites (10+ Published via GitHub)</div>
+
+        <div class="proj-entry">
+          <div class="proj-name">Black Hole Explorer</div>
+          <div class="proj-tech">HTML / CSS / JS · adeeb13.github.io/black-hole--camera-view</div>
+          <div class="proj-desc">3D navigation, anatomy explorer, AI chatbot, gravity escape game — the cosmos in your browser.</div>
+        </div>
+        <div class="proj-entry">
+          <div class="proj-name">The Machine Garden · SEM-CBA · Adaptive Efficiency Sites</div>
+          <div class="proj-tech">github.com/Adeeb13 — THE-MACHINE-GARDEN · SEM-CBA · Adaptive-Efficiency--SEM</div>
+          <div class="proj-desc">Research web presence and documentation hubs for the Self-Evolving Machine &amp; Constraint-Based Autonomy theories.</div>
+        </div>
+        <div class="proj-entry">
+          <div class="proj-name">Event Horizon Lab · Portfolio Sites · Ruby · KaziMahirAdeeb · +5 others</div>
+          <div class="proj-tech">github.com/Adeeb13 — 20+ repositories</div>
+          <div class="proj-desc">Physics simulations, personal portfolios, prototype experiments, collaborative and commissioned builds.</div>
+        </div>
+        <div class="proj-entry">
+          <div class="proj-name">Zooniverse Citizen Science Contributions</div>
+          <div class="proj-tech">Verified by Dr. Laura Trouille (Principal Investigator) · February 2026</div>
+          <div class="proj-desc"><strong>190.7 verified hours</strong> across 2 projects — real scientific data contribution to ongoing research.</div>
+        </div>
+      </div>
+
+      <!-- SERVICE -->
+      <div class="cv-sec">
+        <div class="sec-label">Community &amp; Leadership</div>
+        <div class="prog-row">
+          <div class="pr-name">Bangladesh Economics Olympiad <em>— Campus Ambassador, Khulna Metropolitan</em></div>
+          <div class="pr-detail">2026</div>
+        </div>
+        <div class="prog-row">
+          <div class="pr-name">Rightsight Limited Language Club <em>— English Teaching Volunteer · Underprivileged children</em></div>
+          <div class="pr-detail">2023–2025</div>
+        </div>
+      </div>
+
+    </main>
+
+    <!-- ══ SIDEBAR ══ -->
+    <aside class="cv-sidebar">
+
+      <div class="sb-sec">
+        <div class="sb-label">Education</div>
+        <div class="sb-item">
+          <strong>Govt. Sundarban Adarsha College</strong>
+          Khulna · Expected 2026
+        </div>
+        <div class="sb-item" style="margin-top:0.5rem">
+          <strong>Saint Joseph's High School</strong>
+          GPA 4.00/4.00 · SSC 91.04%
+        </div>
+      </div>
+
+      <div class="sb-sec">
+        <div class="sb-label">Expertise</div>
+        <div style="margin-top:0.2rem">
+          <span class="exp-tag">Constraint-Based Autonomy</span>
+          <span class="exp-tag">Ethical AI Systems</span>
+          <span class="exp-tag">Global Policy</span>
+          <span class="exp-tag">Physics Research</span>
+          <span class="exp-tag">Bio-AI Sensing</span>
+          <span class="exp-tag">Technical Writing</span>
+          <span class="exp-tag">HTML / CSS / JS</span>
+          <span class="exp-tag">Python</span>
+          <span class="exp-tag">C</span>
+          <span class="exp-tag">Geant4</span>
+        </div>
+      </div>
+
+      <div class="sb-sec">
+        <div class="sb-label">Languages</div>
+        <div class="sb-item"><strong>English</strong><span>Fluent</span></div>
+        <div class="sb-item"><strong>Bengali</strong><span>Native</span></div>
+      </div>
+
+      <div class="sb-sec">
+        <div class="sb-label">Online Presence</div>
+        <div class="cert-item">SSRN (Elsevier)</div>
+        <div class="cert-item">PhilArchive</div>
+        <div class="cert-item">ResearchGate</div>
+        <div class="cert-item">Google Scholar</div>
+        <div class="cert-item">Monomousumi.com</div>
+        <div class="cert-item">github.com/Adeeb13</div>
+      </div>
+
+      <div class="sb-sec">
+        <div class="sb-label">Certifications</div>
+        <div class="cert-item">UNITAR – Climate Policy</div>
+        <div class="cert-item">UNECE – Emissions Reporting</div>
+        <div class="cert-item">UN CC:Learn – Paris Agreement</div>
+        <div class="cert-item">Gender Equality &amp; Climate</div>
+        <div class="cert-item">Inclusive Green Economy</div>
+        <div class="cert-item">NAP – Adaptation Plans</div>
+        <div class="cert-item">Ship Energy Efficiency (IMO)</div>
+        <div class="cert-item">Quantum Computing (Open Uni)</div>
+        <div class="cert-item">2D Animation (Grameenphone)</div>
+      </div>
+
+      <div class="sb-sec">
+        <div class="sb-label">Other</div>
+        <div class="sb-item">♟ Chess · ~1800 Rapid</div>
+        <div class="sb-item">🔭 Zooniverse · 190.7 hrs</div>
+        <div class="sb-item">Rightsight Language Club</div>
+      </div>
+
+    </aside>
+  </div>
+
+</body>
+</html>
